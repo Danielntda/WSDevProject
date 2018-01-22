@@ -41,6 +41,9 @@ namespace SportsRelatedWebApplication.SoapApi
         }
         [WebMethod]
 
-        public double 
+        public double HeartRateZone()
+        {
+            return 0;
+        }
     }
 }
