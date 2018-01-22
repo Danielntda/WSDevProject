@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Net;
+using System.Web.Script.Serialization;
+using System.IO;
 
 namespace SportsRelatedWebApplication.SoapApi
 {
@@ -40,10 +43,21 @@ namespace SportsRelatedWebApplication.SoapApi
                 return 0;
         }
         [WebMethod]
-
         public double HeartRateZone()
         {
             return 0;
         }
+        [WebMethod]
+        public string footballData()
+        {
+            var webRequest = (HttpWebRequest)WebRequest.Create("https://api.football-data.org/v1/competitions");
+            var webResponse = (HttpWebResponse)webRequest.GetResponse();
+
+            JavaScriptSerializer json = new JavaScriptSerializer();
+            StreamReader sr = new StreamReader(webResponse.GetResponseStream());
+            string resString = sr.ReadToEnd();
+            return resString;
+        }
     }
+
 }
