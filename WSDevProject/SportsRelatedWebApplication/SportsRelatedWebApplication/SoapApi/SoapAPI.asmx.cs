@@ -56,6 +56,7 @@ namespace SportsRelatedWebApplication.SoapApi
             JavaScriptSerializer json = new JavaScriptSerializer();
             StreamReader sr = new StreamReader(webResponse.GetResponseStream());
             string resString = sr.ReadToEnd();
+            int i = 0;
             return resString;
         }
     }
