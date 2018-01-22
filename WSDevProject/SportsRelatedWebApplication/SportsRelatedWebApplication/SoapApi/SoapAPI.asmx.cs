@@ -53,10 +53,20 @@ namespace SportsRelatedWebApplication.SoapApi
             var webRequest = (HttpWebRequest)WebRequest.Create("https://api.football-data.org/v1/competitions");
             var webResponse = (HttpWebResponse)webRequest.GetResponse();
 
-            JavaScriptSerializer json = new JavaScriptSerializer();
             StreamReader sr = new StreamReader(webResponse.GetResponseStream());
             string resString = sr.ReadToEnd();
-            int i = 0;
+
+            return resString;
+        }
+        [WebMethod]
+        public string footballFixture(string ID)
+        {
+            var webRequest = (HttpWebRequest)WebRequest.Create("https://api.football-data.org/v1/competitions/"+ ID+ "/fixtures");
+            var webResponse = (HttpWebResponse)webRequest.GetResponse();
+
+            StreamReader sr = new StreamReader(webResponse.GetResponseStream());
+            string resString = sr.ReadToEnd();
+
             return resString;
         }
     }

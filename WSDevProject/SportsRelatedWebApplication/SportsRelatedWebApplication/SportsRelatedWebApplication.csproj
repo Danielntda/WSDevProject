@@ -63,8 +63,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FootballSearch.aspx" />
     <Content Include="RunClac.aspx" />
     <Content Include="SoapApi\SoapAPI.asmx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SoapWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SoapWS\SoapAPI.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -72,9 +82,22 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <None Include="Web References\SoapWS\SoapAPI.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FootballSearch.aspx.cs">
+      <DependentUpon>FootballSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FootballSearch.aspx.designer.cs">
+      <DependentUpon>FootballSearch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="RunClac.aspx.cs">
       <DependentUpon>RunClac.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,12 +116,36 @@
     <Compile Include="Sports.Master.designer.cs">
       <DependentUpon>Sports.Master</DependentUpon>
     </Compile>
+    <Compile Include="Web References\SoapWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="asp.net website\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sports.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:26859/SoapApi/SoapAPI.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SoapWS\</RelPath>
+      <UpdateFromURL>http://localhost:26859/SoapApi/SoapAPI.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SportsRelatedWebApplication_SoapWS_SoapAPI</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

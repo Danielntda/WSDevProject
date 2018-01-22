@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RunningPaceCalculation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="time" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="distance" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="pace" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunningPaceCalculationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunningPaceCalculationResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MileKmConversion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="distance" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MileKmConversionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MileKmConversionResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HeartRateZone">
+        <s:complexType />
+      </s:element>
+      <s:element name="HeartRateZoneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HeartRateZoneResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="footballData">
+        <s:complexType />
+      </s:element>
+      <s:element name="footballDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="footballDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="footballFixture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="footballFixtureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="footballFixtureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RunningPaceCalculationSoapIn">
+    <wsdl:part name="parameters" element="tns:RunningPaceCalculation" />
+  </wsdl:message>
+  <wsdl:message name="RunningPaceCalculationSoapOut">
+    <wsdl:part name="parameters" element="tns:RunningPaceCalculationResponse" />
+  </wsdl:message>
+  <wsdl:message name="MileKmConversionSoapIn">
+    <wsdl:part name="parameters" element="tns:MileKmConversion" />
+  </wsdl:message>
+  <wsdl:message name="MileKmConversionSoapOut">
+    <wsdl:part name="parameters" element="tns:MileKmConversionResponse" />
+  </wsdl:message>
+  <wsdl:message name="HeartRateZoneSoapIn">
+    <wsdl:part name="parameters" element="tns:HeartRateZone" />
+  </wsdl:message>
+  <wsdl:message name="HeartRateZoneSoapOut">
+    <wsdl:part name="parameters" element="tns:HeartRateZoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="footballDataSoapIn">
+    <wsdl:part name="parameters" element="tns:footballData" />
+  </wsdl:message>
+  <wsdl:message name="footballDataSoapOut">
+    <wsdl:part name="parameters" element="tns:footballDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="footballFixtureSoapIn">
+    <wsdl:part name="parameters" element="tns:footballFixture" />
+  </wsdl:message>
+  <wsdl:message name="footballFixtureSoapOut">
+    <wsdl:part name="parameters" element="tns:footballFixtureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SoapAPISoap">
+    <wsdl:operation name="RunningPaceCalculation">
+      <wsdl:input message="tns:RunningPaceCalculationSoapIn" />
+      <wsdl:output message="tns:RunningPaceCalculationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MileKmConversion">
+      <wsdl:input message="tns:MileKmConversionSoapIn" />
+      <wsdl:output message="tns:MileKmConversionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HeartRateZone">
+      <wsdl:input message="tns:HeartRateZoneSoapIn" />
+      <wsdl:output message="tns:HeartRateZoneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="footballData">
+      <wsdl:input message="tns:footballDataSoapIn" />
+      <wsdl:output message="tns:footballDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="footballFixture">
+      <wsdl:input message="tns:footballFixtureSoapIn" />
+      <wsdl:output message="tns:footballFixtureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SoapAPISoap" type="tns:SoapAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunningPaceCalculation">
+      <soap:operation soapAction="http://tempuri.org/RunningPaceCalculation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MileKmConversion">
+      <soap:operation soapAction="http://tempuri.org/MileKmConversion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HeartRateZone">
+      <soap:operation soapAction="http://tempuri.org/HeartRateZone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="footballData">
+      <soap:operation soapAction="http://tempuri.org/footballData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="footballFixture">
+      <soap:operation soapAction="http://tempuri.org/footballFixture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SoapAPISoap12" type="tns:SoapAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunningPaceCalculation">
+      <soap12:operation soapAction="http://tempuri.org/RunningPaceCalculation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MileKmConversion">
+      <soap12:operation soapAction="http://tempuri.org/MileKmConversion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HeartRateZone">
+      <soap12:operation soapAction="http://tempuri.org/HeartRateZone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="footballData">
+      <soap12:operation soapAction="http://tempuri.org/footballData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="footballFixture">
+      <soap12:operation soapAction="http://tempuri.org/footballFixture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapAPI">
+    <wsdl:port name="SoapAPISoap" binding="tns:SoapAPISoap">
+      <soap:address location="http://localhost:26859/SoapApi/SoapAPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SoapAPISoap12" binding="tns:SoapAPISoap12">
+      <soap12:address location="http://localhost:26859/SoapApi/SoapAPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
