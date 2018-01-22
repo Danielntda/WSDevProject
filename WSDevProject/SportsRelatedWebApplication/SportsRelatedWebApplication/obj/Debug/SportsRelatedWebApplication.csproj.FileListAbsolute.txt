@@ -1,0 +1,4 @@
+D:\websvcproject\WSDevProject\SportsRelatedWebApplication\SportsRelatedWebApplication\bin\SportsRelatedWebApplication.dll
+D:\websvcproject\WSDevProject\SportsRelatedWebApplication\SportsRelatedWebApplication\bin\SportsRelatedWebApplication.pdb
+D:\websvcproject\WSDevProject\SportsRelatedWebApplication\SportsRelatedWebApplication\obj\Debug\SportsRelatedWebApplication.dll
+D:\websvcproject\WSDevProject\SportsRelatedWebApplication\SportsRelatedWebApplication\obj\Debug\SportsRelatedWebApplication.pdb
