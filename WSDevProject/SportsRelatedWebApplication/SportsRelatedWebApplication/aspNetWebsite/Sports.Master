@@ -30,16 +30,16 @@
             height: 23px;
             text-align: center;
         }
+    	.auto-style6 {
+			font-size: xx-large;
+			text-align: center;
+		}
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <p>
-                    &nbsp;</p>
-            </asp:ContentPlaceHolder>
-        </div>
+        <div class="auto-style6">
+            <strong>Sports Related Web Application</strong></div>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
@@ -56,6 +56,10 @@
                 </td>
             </tr>
         </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
     </form>
 </body>
 </html>
