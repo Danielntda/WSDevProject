@@ -63,8 +63,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FootballSearch.aspx" />
-    <Content Include="RunClac.aspx" />
+    <Content Include="asp.net website\FootballSearch.aspx" />
+    <Content Include="asp.net website\RunClac.aspx" />
     <Content Include="SoapApi\SoapAPI.asmx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,11 +85,11 @@
     <None Include="Web References\SoapWS\SoapAPI.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FootballSearch.aspx.cs">
+    <Compile Include="asp.net website\FootballSearch.aspx.cs">
       <DependentUpon>FootballSearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FootballSearch.aspx.designer.cs">
+    <Compile Include="asp.net website\FootballSearch.aspx.designer.cs">
       <DependentUpon>FootballSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,22 +98,22 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="RunClac.aspx.cs">
+    <Compile Include="asp.net website\RunClac.aspx.cs">
       <DependentUpon>RunClac.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RunClac.aspx.designer.cs">
+    <Compile Include="asp.net website\RunClac.aspx.designer.cs">
       <DependentUpon>RunClac.aspx</DependentUpon>
     </Compile>
     <Compile Include="SoapApi\SoapAPI.asmx.cs">
       <DependentUpon>SoapAPI.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Sports.Master.cs">
+    <Compile Include="asp.net website\Sports.Master.cs">
       <DependentUpon>Sports.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sports.Master.designer.cs">
+    <Compile Include="asp.net website\Sports.Master.designer.cs">
       <DependentUpon>Sports.Master</DependentUpon>
     </Compile>
     <Compile Include="Web References\SoapWS\Reference.cs">
@@ -122,11 +122,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="asp.net website\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Sports.Master" />
+    <Content Include="asp.net website\Sports.Master" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
