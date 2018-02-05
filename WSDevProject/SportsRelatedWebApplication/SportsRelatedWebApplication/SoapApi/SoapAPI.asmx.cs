@@ -19,25 +19,28 @@ namespace SportsRelatedWebApplication.SoapApi
     // [System.Web.Script.Services.ScriptService]
     public class SoapAPI : System.Web.Services.WebService
     {
-
-        [WebMethod]
-        public double RunningPaceCalculation(string type, double time, double distance, double pace)
+        [WebMethod(Description = "(double pace,double distance)")]
+        public double calculateTime(double pace, double distance)
         {
-            if (type == "calculateTime")
-                return pace * distance;
-            else if (type == "calculateDistance")
-                return time / pace;
-            else if (type == "calculatePace")
-                return time / distance;
-            else return 0;
+            return pace * distance;
+        }
+        [WebMethod(Description = "(double pace, double time)")]
+        public double calculateDistance(double pace, double time)
+        {
+            return time / pace;
+        }
+        [WebMethod(Description ="double time, double distace")]
+        public double calculatePace(double time, double distance)
+        {
+            return time / distance;
         }
 
-        [WebMethod]
-        public double MileKmConversion(string type, double distance)
+        [WebMethod(Description = "MileKmConversion(bool type(0=KM To Mile, 1=Mile To KM), double distance)")]
+        public double MileKmConversion(bool type, double distance)
         {
-            if (type == "KMToMile")
+            if (type == false)
                 return distance / 1.60934;
-            else if (type == "MileToKM")
+            else if (type == true)
                 return distance * 1.60934;
             else
                 return 0;

@@ -65,10 +65,14 @@
   <ItemGroup>
     <Content Include="aspNetWebsite\FootballSearch.aspx" />
     <Content Include="aspNetWebsite\RunClac.aspx" />
+    <Content Include="SoapApi\FantasyPlayers.xml" />
     <Content Include="SoapApi\SoapAPI.asmx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SoapApi\FantasyPlayersSchema.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\SoapWS\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

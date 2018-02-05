@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FantasyPlayersSchema"
+    targetNamespace="http://tempuri.org/FantasyPlayersSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/FantasyPlayersSchema.xsd"
+    xmlns:mstns="http://tempuri.org/FantasyPlayersSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name ="FantasyPlayers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref ="players"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="players" type="playerDetails"/>
+    <xs:complexType name="playerDetails">
+      <xs:sequence>
+        <xs:element name="playerName" type="xs:string"/>
+        <xs:element name="playerTeam" type="xs:string"/>
+        <xs:element name="playerScore" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:schema>

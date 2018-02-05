@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FantasyPlayers xmlns="http://tempuri.org/FantasyPlayersSchema.xsd">
+  <players>
+    <playerName>Christiano Ronaldo</playerName>
+    <playerTeam>Real Madrid</playerTeam>
+    <playerScore>12</playerScore>
+  </players>
+  <players>
+    <playerName>Lionel Messi</playerName>
+    <playerTeam>FC Barcelona</playerTeam>
+    <playerScore>10</playerScore>
+  </players>
+  
+</FantasyPlayers>
