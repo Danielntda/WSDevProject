@@ -3,12 +3,66 @@
   <players>
     <playerName>Christiano Ronaldo</playerName>
     <playerTeam>Real Madrid</playerTeam>
-    <playerScore>12</playerScore>
+    <playerScore>10</playerScore>
   </players>
   <players>
     <playerName>Lionel Messi</playerName>
     <playerTeam>FC Barcelona</playerTeam>
     <playerScore>10</playerScore>
   </players>
-  
+  <players>
+    <playerName>Coutinho</playerName>
+    <playerTeam>FC Barcerlona</playerTeam>
+    <playerScore>7</playerScore>
+  </players>
+  <players>
+    <playerName>Zlatan Ibrahimovic</playerName>
+    <playerTeam>Manchester United</playerTeam>
+    <playerScore>8</playerScore>
+  </players>
+  <players>
+    <playerName>Andres Iniesta</playerName>
+    <playerTeam>FC Barcelona</playerTeam>
+    <playerScore>9</playerScore>
+  </players>
+  <players>
+    <playerName>Neymar</playerName>
+    <playerTeam>Paris Saint-Germain F.C</playerTeam>
+    <playerScore>9</playerScore>
+  </players>
+  <players>
+    <playerName>Wayne Rooney</playerName>
+    <playerTeam>Everton F.C</playerTeam>
+    <playerScore>7</playerScore>
+  </players>
+  <players>
+    <playerName>Arjen Robben</playerName>
+    <playerTeam>FC Bayern Munich</playerTeam>
+    <playerScore>8</playerScore>
+  </players>
+  <players>
+    <playerName>David de Gea</playerName>
+    <playerTeam>Manchester United</playerTeam>
+    <playerScore>9</playerScore>
+  </players>
+  <players>
+    <playerName>Sergio Ramos</playerName>
+    <playerTeam>Real Madrid</playerTeam>
+    <playerScore>9</playerScore>
+  </players>
+  <players>
+    <playerName>Dani Alves</playerName>
+    <playerTeam>Paris St-Germain F.C</playerTeam>
+    <playerScore>8</playerScore>
+  </players>
+  <players>
+    <playerName>Gareth Bale</playerName>
+    <playerTeam>Real Madrid</playerTeam>
+    <playerScore>8</playerScore>
+  </players>
+  <players>
+    <playerName>Keylor Navas</playerName>
+    <playerTeam>Real Madrid</playerTeam>
+    <playerScore>8</playerScore>
+  </players>
 </FantasyPlayers>
